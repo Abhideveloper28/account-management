@@ -1,0 +1,11 @@
+%p
+  %strong Type:
+  = @account.account_type
+%p
+  %strong Branch:
+  = @account.branch
+%p
+  %strong Minor Indicator:
+  = @account.minor_indicator
+
+= link_to 'Edit', edit_account_path

@@ -1,0 +1,21 @@
+= link_to "New Account", new_account_path
+%div
+  %table.table
+    %thead
+      %tr
+        %th Account Type
+        %th Branch
+        %th Open Date
+        %th{colspan: "3"} Actions
+    %tbody
+      - @accounts.each do |account|
+        %tr
+          %td= account.account_type
+          %td= account.branch
+          %td= account.open_date
+          %td
+            = link_to 'View', account_path(account)
+          %td
+            = link_to 'Edit', edit_account_path(account)
+          %td
+            = link_to "Delete", account_path(account), method: :delete

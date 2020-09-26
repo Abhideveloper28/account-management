@@ -1,0 +1,4 @@
+%h1 New Account
+= form_for(@account, url: { action: "create" }, method: :post) do |form|
+  = render 'form', form: form
+  = form.submit 'Create'
