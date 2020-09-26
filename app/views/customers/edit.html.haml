@@ -1,0 +1,4 @@
+%h1 Edit Customer
+= form_for(@customer, url: { action: "update" }, method: :put) do |form|
+  = render 'form', form: form
+  = form.submit 'Edit'

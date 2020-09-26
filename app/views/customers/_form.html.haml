@@ -1,0 +1,20 @@
+- if @customer.errors.any?
+  #error_explanation
+    %h2
+      = pluralize(@customer.errors.count, "error")
+      prohibited this customer from being saved:
+    %ul
+      - @customer.errors.full_messages.each do |msg|
+        %li= msg
+.form-group
+  = form.label :user_name
+  = form.text_field :user_name, class: 'form-control'
+.form-group
+  = form.label :gender
+  = form.select:gender, ['other', 'male', 'female'], {}, { class: 'form-control'}
+.form-group
+  = form.label :phone_number
+  = form.check_box :phone_number, class: 'form-control'
+.form-group
+  = form.label :date_of_birth
+  = form.date_field :date_of_birth, class: 'form-control'

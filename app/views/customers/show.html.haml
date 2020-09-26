@@ -1,0 +1,11 @@
+%p
+  %strong Email:
+  = @customer.email
+%p
+  %strong User Name:
+  = @customer.user_name
+%p
+  %strong Gender:
+  = @customer.gender
+
+= link_to 'Edit', edit_customer_path
